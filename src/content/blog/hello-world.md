@@ -8,13 +8,11 @@ tags:
   - announcement
 ---
 Hi, everyone!
-
-
+<br>
 Today marks the creation of my blog 🎉
 
 I hope I'll be able to consistently write things down and share them to the world.
-
-
+<br>
 Best regards,
 
 Dimas
