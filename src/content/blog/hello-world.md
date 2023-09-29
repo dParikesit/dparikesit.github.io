@@ -2,7 +2,6 @@
 title: Hello, world!
 description: Hello, world!
 pubDatetime: 2023-09-29T08:57:13+07:00
-ogImage: 
 featured: true
 draft: false
 tags:
