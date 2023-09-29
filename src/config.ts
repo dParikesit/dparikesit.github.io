@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "dParikesit",
   desc: "Dimas Shidqi Parikesit's personal blog",
   title: "dParikesit",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "astropaper-og.svg",
   lightAndDarkMode: true,
   postPerPage: 5,
 };

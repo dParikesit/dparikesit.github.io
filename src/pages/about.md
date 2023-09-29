@@ -6,7 +6,7 @@ title: "About"
 
 ---
 <div>
-  <img src="/assets/profpic.png" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
+  <img src="/assets/profpic.webp" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
 </div>
 
 # About Dimas
@@ -28,7 +28,7 @@ If you want to learn more about doing research, I'm more than happy to share how
 
 This website is used to announce my life milestones, publish my personal/technical blogs, paper reading notes, and other things.
 
-Do note that everything in this website is my personal opinion that doesn't represent anything else other than myself.
+Do note that everything in this website is my personal opinion that doesn't represent anyone else other than myself.
 
 # Attributions
 
