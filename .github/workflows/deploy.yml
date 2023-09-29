@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+env:
+  # Setting an environment variable with the value of a configuration variable
+  PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.PUBLIC_GOOGLE_SITE_VERIFICATION }}
+
 on:
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
