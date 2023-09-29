@@ -1,36 +1,35 @@
 ---
+
 layout: ../layouts/AboutLayout.astro
+
 title: "About"
+
 ---
-
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
-
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
 <div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="../assets/images/profpic.png" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
 </div>
 
-## Tech Stack
+# About Dimas
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+Hi, I'm Dimas. I'm an undergraduate researcher at [Bandung Institute of Technology, Indonesia](https://itb.ac.id/en/)
 
-## Features
+I like doing systems programming, ML/AI projects, creating websites (only the backend part), and busying myself with my homelab. I also like to discuss things with my peers and underclassmen.
 
-Here are certain features of this site.
+You can take a look at my projects on [Github](https://github.com/dParikesit)
 
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
+# Connect with me!
 
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+Feel free to send an email to [dsparikesit@gmail.com](mailto:dsparikesit@gmail.com)
+You can also connect with me on [LinkedIn](https://www.linkedin.com/in/dimas-parikesit/), but I rarely open it.
+
+If you want to learn more about doing research, I'm more than happy to share how I got into it and how you can do it too! Just email me and we can talk about it.
+
+# Website Usage
+
+This website is used to announce my life milestones, publish my personal/technical blogs, paper reading notes, and other things.
+
+Do note that everything in this website is my personal opinion that doesn't represent anything else other than myself.
+
+# Attributions
+
+This website is created using [astro-paper](https://github.com/satnaing/astro-paper) template based on Astro v3.
