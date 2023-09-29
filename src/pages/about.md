@@ -6,7 +6,7 @@ title: "About"
 
 ---
 <div>
-  <img src="../assets/images/profpic.png" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
+  <img src="/assets/profpic.png" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
 </div>
 
 # About Dimas
