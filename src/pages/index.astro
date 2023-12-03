@@ -6,10 +6,11 @@ import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
+import Timeline from "@components/Timeline";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
-import { SOCIALS } from "@config";
+import { SOCIALS, NEWS, PUBLICATION, DIMASNAMES, SERVICES } from "@config";
 
 const posts = await getCollection("blog");
 
@@ -67,6 +68,63 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </div>
         )
       }
+    </section>
+
+    <Hr />
+
+    <section id="news">
+      <h2>News</h2>
+      <div class="my-6">
+        <Timeline />
+      </div>
+    </section>
+
+    
+
+    <Hr />
+
+    <section id="publication">
+      <h2>Publication</h2>
+      <ul class="my-6">
+        {PUBLICATION.map(( data ) => (
+          <div>
+            <LinkButton
+              className="text-skin-accent hover:underline hover:underline-offset-4 decoration-dashed"
+              href={data.url}
+            >
+              {data.title}
+            </LinkButton>
+            <br />
+            {data.authors.map((author) => (
+              <a className=`italic text-sm space-x-2 mr-2 ${DIMASNAMES.find((dims) => dims.name === author) ? 'font-bold' : 'opacity-80'}`>   
+                {author}
+              </a>
+            ))}
+            <div class='text-sm space-x-2 mr-2'>
+              {data.conference}
+            </div>
+            <br />
+          </div>
+        ))}
+      </ul>
+    </section>
+
+    <Hr />
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="my-6">
+        {SERVICES.map((data) => (
+          <div class="mb-2">
+            <h3>{data.title}</h3>
+            <ul class="list-disc ml-4">
+              {data.services.map((service) => (
+                <li>{service}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </section>
 
     <Hr />
@@ -160,5 +218,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
+  }
+
+  /* ===== News, Services, & Publication Posts Sections ===== */
+  #news, #publication, #services {
+    @apply pb-6 pt-12;
+  }
+  #news h2, #services h2, #publication h2 {
+    @apply text-2xl font-semibold tracking-wide;
   }
 </style>

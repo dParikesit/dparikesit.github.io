@@ -1,4 +1,11 @@
-import type { Site, SocialObjects } from "./types";
+import type {
+  Site,
+  SocialObjects,
+  NewsObject,
+  PublicationObject,
+  DimasNamesObject,
+  ServicesObject,
+} from "./types";
 
 export const SITE: Site = {
   website: "https://dparikesit.github.io/",
@@ -18,6 +25,49 @@ export const LOGO_IMAGE = {
   width: 216,
   height: 46,
 };
+
+export const SERVICES: ServicesObject = [
+  {
+    title: "Teaching Assistant",
+    services: ["Pengkom", "GAIB", "DASPRO"],
+  },
+  {
+    title: "TITLE 2",
+    services: ["PENGKOM 2"],
+  },
+];
+
+export const NEWS: NewsObject = [
+  {
+    title: "Dimas 1998",
+    date: "17 Agustus 1945",
+  },
+  {
+    title: "bip bup",
+    date: "1 Desember 2021",
+  },
+];
+
+export const DIMASNAMES: DimasNamesObject = [
+  {
+    name: "Dimas Shidqi",
+  },
+];
+
+export const PUBLICATION: PublicationObject = [
+  {
+    title: "Ini judul",
+    authors: ["Bukan Dimas", "Bukan Dimas", "Dimas Shidqi"],
+    conference: "Ini judul conference",
+    url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
+  },
+  {
+    title: "Ini judul",
+    authors: ["Dimas Shidqi", "Bukan Dimas"],
+    conference: undefined,
+    url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
+  },
+];
 
 export const SOCIALS: SocialObjects = [
   {
