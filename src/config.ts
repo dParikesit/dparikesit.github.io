@@ -28,52 +28,41 @@ export const LOGO_IMAGE = {
 
 export const SERVICES: ServicesObject = [
   {
-    title: "Teaching Assistant",
-    services: ["Pengkom", "GAIB", "DASPRO"],
-  },
-  {
-    title: "TITLE 2",
-    services: ["PENGKOM 2"],
+    title: "Teaching Assistant - Bandung Institute of Technology",
+    services: ["Artificial Intelligence", "Programming Fundamentals", "Introduction to Computation"],
   },
 ];
 
 export const NEWS: NewsObject = [
-  {
-    title: "Dimas 1998",
-    date: "17 Agustus 1945",
-  },
-  {
-    title: "bip bup",
-    date: "1 Desember 2021",
-  },
+  // {
+  //   title: "I'm applying to",
+  //   date: "December 12 2023",
+  // },
 ];
 
 export const DIMASNAMES: DimasNamesObject = [
   {
     name: "Dimas Shidqi",
   },
+  {
+    name: "Dimas Parikesit",
+  },
 ];
 
 export const PUBLICATION: PublicationObject = [
-  {
-    title: "Ini judul",
-    authors: ["Bukan Dimas", "Bukan Dimas", "Dimas Shidqi"],
-    conference: "Ini judul conference",
-    url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
-  },
-  {
-    title: "Ini judul",
-    authors: ["Dimas Shidqi", "Bukan Dimas"],
-    conference: undefined,
-    url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
-  },
+  // {
+  //   title: "Ini judul",
+  //   authors: ["Bukan Dimas", "Bukan Dimas", "Dimas Shidqi"],
+  //   conference: "Ini judul conference",
+  //   url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
+  // },
 ];
 
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/dParikesit",
-    linkTitle: `Checkout ${SITE.title} on Github`,
+    name: "Mail",
+    href: "mailto:dsparikesit@gmail.com",
+    linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
   {
@@ -83,16 +72,16 @@ export const SOCIALS: SocialObjects = [
     active: true,
   },
   {
-    name: "Mail",
-    href: "mailto:dsparikesit@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
+    name: "Github",
+    href: "https://github.com/dParikesit",
+    linkTitle: `Checkout ${SITE.title} on Github`,
     active: true,
   },
   {
     name: "Twitter",
     href: "https://twitter.com/dimashidqi",
     linkTitle: `Follow ${SITE.title} on Twitter`,
-    active: true,
+    active: false,
   },
   {
     name: "Instagram",
