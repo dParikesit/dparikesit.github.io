@@ -23,51 +23,56 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <h1 class="mr-2">Dimas Parikesit</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-      </a>
+    <section id="hero" class="flex flex-row">
+      <div class="w-8/12">
+        <h1 class="text-[2.1rem] mr-2">Dimas Shidqi Parikesit</h1>
+        <a
+          target="_blank"
+          href="/rss.xml"
+          class="rss-link"
+          aria-label="rss feed"
+          title="RSS Feed"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+            ><path
+              d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+            ></path><path
+              d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+            ></path><circle cx="6" cy="18" r="2"></circle>
+          </svg>
+        </a>
 
-      <p>
-        Hi, I'm Dimas. I'm an undergraduate researcher at
-        <LinkButton
-          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="https://itb.ac.id/en/"
-        >
-          Bandung Institute of Technology, Indonesia
-        </LinkButton>
-      </p>
-      <p>
-        I'm currently applying for PhD in systems. Check out my CV 
-        <LinkButton
-          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-          href="/cv.pdf"
-        >
-          here
-        </LinkButton>
-      </p>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+        <p>
+          Hi, I'm Dimas. I'm an undergraduate researcher at
+          <LinkButton
+            className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+            href="https://itb.ac.id/en/"
+          >
+            Bandung Institute of Technology, Indonesia
+          </LinkButton>
+        </p>
+        <p>
+          I'm currently applying for PhD in systems. Check out my CV 
+          <LinkButton
+            className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+            href="/cv.pdf"
+          >
+            here
+          </LinkButton>
+        </p>
+        {
+          // only display if at least one social link is enabled
+          socialCount > 0 && (
+            <div class="social-wrapper">
+              <div class="social-links">Social Links:</div>
+              <Socials />
+            </div>
+          )
+        }
+      </div>
+      <div class="w-4/12 mt-[4.5%] ml-[1%]">
+        <img src="/assets/profpic.webp" class="w-9/12 ml-[20%]" alt="Dimas Shidqi Parikesit">
+      </div>
     </section>
 
     <Hr />
@@ -186,10 +191,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 <style>
   /* ===== Hero Section ===== */
   #hero {
-    @apply pb-6 pt-8;
+    @apply w-full py-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-2 inline-block font-bold sm:my-4;
   }
   #hero .rss-link {
     @apply mb-6;
