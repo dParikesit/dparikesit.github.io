@@ -34,10 +34,14 @@ export const SERVICES: ServicesObject = [
 ];
 
 export const NEWS: NewsObject = [
-  // {
-  //   title: "I'm applying to",
-  //   date: "December 12 2023",
-  // },
+  {
+    title: "I'm applying for Ph.D. program in systems! Let's chat if you're interested in hiring me.",
+    date: "June 16 2023",
+  },
+  {
+    title: "EVStore is up on ASPLOS '23! I built the cache key clusters for EVProx.",
+    date: "June 16 2023",
+  },
 ];
 
 export const DIMASNAMES: DimasNamesObject = [
