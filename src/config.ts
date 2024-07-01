@@ -35,8 +35,12 @@ export const SERVICES: ServicesObject = [
 
 export const NEWS: NewsObject = [
   {
+    title: "I'm admitted to the PhD program at LIFTLAB @ University of Virginia!",
+    date: "January 22 2024"
+  },
+  {
     title: "I'm applying for Ph.D. program in systems! Let's chat if you're interested in hiring me.",
-    date: "June 16 2023",
+    date: "December 15 2023",
   },
   {
     title: "EVStore is up on ASPLOS '23! I built the cache key clusters for EVProx.",

@@ -11,7 +11,9 @@ title: "About"
 
 # About Dimas
 
-Hi, I'm Dimas. I'm an undergraduate researcher at [Bandung Institute of Technology, Indonesia](https://itb.ac.id/en/)
+Hi, I'm Dimas. I'm a PhD student at LIFTLAB @ University of Virginia, advised by [Prof. Chang Lou](https://changlousys.github.io/)
+
+[Bandung Institute of Technology, Indonesia](https://itb.ac.id/en/)
 
 I like doing systems programming, ML/AI projects, creating websites (only the backend part), and busying myself with my homelab. I also like to discuss things with my peers and underclassmen.
 
