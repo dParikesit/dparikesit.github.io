@@ -1,13 +1,13 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
-  ogImage: "astropaper-og.jpg",
+  website: "https://dparikesit.github.io/",
+  author: "dParikesit",
+  desc: "Dimas Shidqi Parikesit's personal blog",
+  title: "dParikesit",
+  ogImage: "astropaper-og.png",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -23,41 +23,81 @@ export const LOGO_IMAGE = {
   height: 46,
 };
 
+export const SERVICES: ServicesObject = [
+  {
+    title: "Teaching Assistant - Bandung Institute of Technology",
+    services: ["Artificial Intelligence", "Programming Fundamentals", "Introduction to Computation"],
+  },
+];
+
+export const NEWS: NewsObject = [
+  {
+    title: "I'm admitted to the PhD program at LIFTLAB @ University of Virginia!",
+    date: "January 22 2024"
+  },
+  {
+    title: "I'm applying for Ph.D. program in systems! Let's chat if you're interested in hiring me.",
+    date: "December 15 2023",
+  },
+  {
+    title: "EVStore is up on ASPLOS '23! I built the cache key clusters for EVProx.",
+    date: "June 16 2023",
+  },
+];
+
+export const DIMASNAMES: DimasNamesObject = [
+  {
+    name: "Dimas Shidqi",
+  },
+  {
+    name: "Dimas Parikesit",
+  },
+];
+
+export const PUBLICATION: PublicationObject = [
+  // {
+  //   title: "Ini judul",
+  //   authors: ["Bukan Dimas", "Bukan Dimas", "Dimas Shidqi"],
+  //   conference: "Ini judul conference",
+  //   url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
+  // },
+];
+
 export const SOCIALS: SocialObjects = [
   {
-    name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
+    name: "Mail",
+    href: "mailto:dsparikesit@gmail.com",
+    linkTitle: `Send an email to ${SITE.title}`,
     active: true,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/dimas-parikesit/",
+    linkTitle: `Have job opportunities? ${SITE.title} on LinkedIn`,
+    active: true,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/dParikesit",
+    linkTitle: `Checkout ${SITE.title} on Github`,
+    active: true,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/dimashidqi",
+    linkTitle: `Follow ${SITE.title} on Twitter`,
+    active: false,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/dimashidqi/",
+    linkTitle: `${SITE.title} on Instagram`,
+    active: false,
   },
   {
     name: "Facebook",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Facebook`,
-    active: true,
-  },
-  {
-    name: "Instagram",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
-  },
-  {
-    name: "Mail",
-    href: "mailto:yourmail@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
-  },
-  {
-    name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitter`,
     active: false,
   },
   {
