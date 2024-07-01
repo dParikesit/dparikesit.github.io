@@ -17,3 +17,24 @@ export type SocialObjects = {
   active: boolean;
   linkTitle: string;
 }[];
+
+export type DimasNamesObject = {
+  name: string;
+}[];
+
+export type NewsObject = {
+  title: string;
+  date: string;
+}[];
+
+export type ServicesObject = {
+  title: string;
+  services: string[];
+}[];
+
+export type PublicationObject = {
+  title: string;
+  authors: string[];
+  conference: string | undefined;
+  url: string;
+}[];
