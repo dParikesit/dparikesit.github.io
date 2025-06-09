@@ -32,6 +32,10 @@ export const SERVICES: ServicesObject = [
 
 export const NEWS: NewsObject = [
   {
+    title: "T2C is accepted at OSDI '25!",
+    date: "March 25 2025"
+  },
+  {
     title: "I'm admitted to the PhD program at LIFTLAB @ University of Virginia!",
     date: "January 22 2024"
   },
@@ -55,12 +59,12 @@ export const DIMASNAMES: DimasNamesObject = [
 ];
 
 export const PUBLICATION: PublicationObject = [
-  // {
-  //   title: "Ini judul",
-  //   authors: ["Bukan Dimas", "Bukan Dimas", "Dimas Shidqi"],
-  //   conference: "Ini judul conference",
-  //   url: "https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2022-2023/stima22-23.htm",
-  // },
+  {
+    title: "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
+    authors: ["Chang Lou", "Dimas Shidqi", "Yujin Huang", "Zhewen Yang", "Senapati Diwangkara", "Yuzhuo Jing", "Achmad Imam Kistijantoro", "Ding Yuan", "Suman Nath", "Peng Huang"],
+    conference: "OSDI '25",
+    url: "https://www.usenix.org/conference/osdi25/presentation/lou",
+  },
 ];
 
 export const SOCIALS: SocialObjects = [
