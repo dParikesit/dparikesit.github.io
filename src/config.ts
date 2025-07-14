@@ -63,6 +63,9 @@ export const DIMASNAMES: DimasNamesObject = [
   {
     name: "Dimas Parikesit",
   },
+  {
+    name: "Dimas Shidqi Parikesit",
+  },
 ];
 
 export const PUBLICATION: PublicationObject = [
