@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 env:
   # Setting an environment variable with the value of a configuration variable
   PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.PUBLIC_GOOGLE_SITE_VERIFICATION }}
+  BUILD_PATH: "."
 
 on:
   # Trigger the workflow every time you push to the `main` branch
@@ -17,6 +18,10 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -42,6 +47,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+      
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
 
       - name: "📦 Install dependencies"
         run: pnpm install
@@ -54,6 +63,11 @@ jobs:
 
       - name: "🚀 Build the project"
         run: pnpm run build
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
 
   deploy:
     needs: build
