@@ -26,25 +26,32 @@ export const LOGO_IMAGE = {
 export const SERVICES: ServicesObject = [
   {
     title: "Teaching Assistant - Bandung Institute of Technology",
-    services: ["Artificial Intelligence", "Programming Fundamentals", "Introduction to Computation"],
+    services: [
+      "Artificial Intelligence",
+      "Programming Fundamentals",
+      "Introduction to Computation",
+    ],
   },
 ];
 
 export const NEWS: NewsObject = [
   {
     title: "T2C is accepted at OSDI '25!",
-    date: "March 25 2025"
+    date: "March 25 2025",
   },
   {
-    title: "I'm admitted to the PhD program at LIFTLAB @ University of Virginia!",
-    date: "January 22 2024"
+    title:
+      "I'm admitted to the PhD program at LIFTLAB @ University of Virginia!",
+    date: "January 22 2024",
   },
   {
-    title: "I'm applying for Ph.D. program in systems! Let's chat if you're interested in hiring me.",
+    title:
+      "I'm applying for Ph.D. program in systems! Let's chat if you're interested in hiring me.",
     date: "December 15 2023",
   },
   {
-    title: "EVStore is up on ASPLOS '23! I built the cache key clusters for EVProx.",
+    title:
+      "EVStore is up on ASPLOS '23! I built the cache key clusters for EVProx.",
     date: "June 16 2023",
   },
 ];
@@ -60,8 +67,20 @@ export const DIMASNAMES: DimasNamesObject = [
 
 export const PUBLICATION: PublicationObject = [
   {
-    title: "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
-    authors: ["Chang Lou", "Dimas Shidqi", "Yujin Huang", "Zhewen Yang", "Senapati Diwangkara", "Yuzhuo Jing", "Achmad Imam Kistijantoro", "Ding Yuan", "Suman Nath", "Peng Huang"],
+    title:
+      "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
+    authors: [
+      "Chang Lou",
+      "Dimas Shidqi Parikesit",
+      "Yujin Huang",
+      "Zhewen Yang",
+      "Senapati Diwangkara",
+      "Yuzhuo Jing",
+      "Achmad Imam Kistijantoro",
+      "Ding Yuan",
+      "Suman Nath",
+      "Peng Huang",
+    ],
     conference: "OSDI '25",
     url: "https://www.usenix.org/conference/osdi25/presentation/lou",
   },
