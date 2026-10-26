@@ -1,21 +1,12 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
-import Card from "@components/Card";
 import Timeline from "@components/Timeline";
 import Socials from "@components/Socials.astro";
-import getSortedPosts from "@utils/getSortedPosts";
-import { SOCIALS, NEWS, PUBLICATION, DIMASNAMES, SERVICES } from "@config";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+import { SOCIALS, PUBLICATION, DIMASNAMES, SERVICES } from "@config";
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
@@ -24,7 +15,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Dimas Parikesit</h1>
+      <h1>Dimas Shidqi Parikesit</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -43,14 +34,20 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-          Hi, I'm Dimas. I'm a PhD student at LiftLab @ University of Virginia in the field of <b>System Reliability</b>. My advisor is
-          <LinkButton
-            className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
-            href="https://changlousys.github.io/"
-          >
-            Prof. Chang Lou
-          </LinkButton>
-        </p>
+        Hi, I'm Dimas. I'm a Computer Science PhD student at LiftLab,
+        University of Virginia, advised by
+        <LinkButton
+          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+          href="https://changlousys.github.io/"
+        >
+          Prof. Chang Lou
+        </LinkButton>.
+      </p>
+      <p>
+        My research focuses on <strong>systems reliability</strong>,
+        <strong>cloud and distributed systems</strong>, and
+        <strong>AI inference systems</strong>.
+      </p>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -73,29 +70,74 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
 
+    <section id="research">
+      <h2>Research</h2>
+      <div class="my-6 space-y-6">
+        <article>
+          <h3 class="font-semibold">
+            Software correctness across reimplementations
+          </h3>
+          <p class="mt-2">
+            I investigate how LLMs can preserve useful semantic information when
+            systems are reimplemented with entirely different designs or
+            architectures. I have reviewed 12 reimplementation cases, including
+            the SGLang router, Bun, and Vinext.
+          </p>
+        </article>
+        <article>
+          <h3 class="font-semibold">LISA: preventing regression failures</h3>
+          <p class="mt-2">
+            I lead the design and implementation of LISA, which uses LLMs to turn
+            historical bug reports into low-level invariants. We identified 34 new
+            bugs across ZooKeeper, HDFS, HBase, and Solr; 16 were confirmed by
+            developers.
+          </p>
+          <p class="mt-2">
+            I modified the JVM engine and built the invariant-checking pipeline
+            using static analysis, concolic execution, and Z3. I also lead and
+            mentor five research interns.
+          </p>
+        </article>
+        <LinkButton
+          href="/about/"
+          className="text-skin-accent underline decoration-dashed underline-offset-4"
+        >
+          More about my background and experience
+        </LinkButton>
+      </div>
+    </section>
+
+    <Hr />
+
     <section id="publication">
-      <h2>Publication</h2>
+      <h2>Selected Publications</h2>
       <ul class="my-6">
-        {PUBLICATION.map(( data ) => (
-          <div>
-            <LinkButton
-              className="text-skin-accent hover:underline hover:underline-offset-4 decoration-dashed"
-              href={data.url}
-            >
-              {data.title}
-            </LinkButton>
-            <br />
-            {data.authors.map((author) => (
-              <a className=`italic text-sm space-x-2 mr-2 ${DIMASNAMES.find((dims) => dims.name === author) ? 'font-bold' : 'opacity-80'}`>   
-                {author}
-              </a>
-            ))}
-            <div class='text-sm space-x-2 mr-2'>
-              {data.conference}
-            </div>
-            <br />
-          </div>
-        ))}
+        {
+          PUBLICATION.map(data => (
+            <li class="mb-6 last:mb-0">
+              <LinkButton
+                className="text-skin-accent decoration-dashed hover:underline hover:underline-offset-4"
+                href={data.url}
+              >
+                {data.title}
+              </LinkButton>
+              <p class="mt-1 text-sm italic">
+                {data.authors.map((author, index) => (
+                  <span
+                    class={
+                      DIMASNAMES.some(dims => dims.name === author)
+                        ? "font-bold"
+                        : "opacity-80"
+                    }
+                  >
+                    {author + (index < data.authors.length - 1 ? ", " : "")}
+                  </span>
+                ))}
+              </p>
+              <div class="mt-1 text-sm">{data.conference}</div>
+            </li>
+          ))
+        }
       </ul>
     </section>
 
@@ -211,11 +253,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply my-8 text-center;
   }
 
-  /* ===== News, Services, & Publication Posts Sections ===== */
-  #news, #publication, #services {
+  /* ===== Academic Profile Sections ===== */
+  #news,
+  #research,
+  #publication,
+  #services {
     @apply pb-6 pt-12;
   }
-  #news h2, #services h2, #publication h2 {
+  #news h2,
+  #research h2,
+  #services h2,
+  #publication h2 {
     @apply text-2xl font-semibold tracking-wide;
   }
 </style>

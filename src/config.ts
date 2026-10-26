@@ -1,9 +1,16 @@
-import type { Site, SocialObjects } from "./types";
+import type {
+  DimasNamesObject,
+  NewsObject,
+  PublicationObject,
+  ServicesObject,
+  Site,
+  SocialObjects,
+} from "./types";
 
 export const SITE: Site = {
   website: "https://dparikesit.github.io/",
-  author: "dParikesit",
-  desc: "Dimas Shidqi Parikesit's personal blog",
+  author: "Dimas Shidqi Parikesit",
+  desc: "Dimas Shidqi Parikesit is a Computer Science PhD student at the University of Virginia researching systems reliability, cloud and distributed systems, and AI inference systems.",
   title: "dParikesit",
   ogImage: "astropaper-og.png",
   lightAndDarkMode: true,
@@ -36,8 +43,17 @@ export const SERVICES: ServicesObject = [
 
 export const NEWS: NewsObject = [
   {
+    title: "Our position paper on LISA is published at HotNets '25!",
+    date: "November 2025",
+  },
+  {
     title: "T2C is accepted at OSDI '25!",
     date: "March 25 2025",
+  },
+  {
+    title:
+      "I started my Computer Science PhD at LiftLab, University of Virginia, advised by Prof. Chang Lou.",
+    date: "August 2024",
   },
   {
     title:
@@ -71,6 +87,13 @@ export const DIMASNAMES: DimasNamesObject = [
 export const PUBLICATION: PublicationObject = [
   {
     title:
+      "Once Bitten, Still Shy: Can We Prevent Cloud Systems from Repeating Their Mistakes?",
+    authors: ["Dimas Parikesit", "Chang Lou"],
+    conference: "ACM HotNets 2025 · Position paper · First author",
+    url: "https://conferences.sigcomm.org/hotnets/2025/papers/hotnets25-final48.pdf",
+  },
+  {
+    title:
       "Deriving Semantic Checkers from Tests to Detect Silent Failures in Production Distributed Systems",
     authors: [
       "Chang Lou",
@@ -84,7 +107,7 @@ export const PUBLICATION: PublicationObject = [
       "Suman Nath",
       "Peng Huang",
     ],
-    conference: "OSDI '25",
+    conference: "USENIX OSDI 2025 · Second author",
     url: "https://www.usenix.org/conference/osdi25/presentation/lou",
   },
 ];
@@ -92,20 +115,20 @@ export const PUBLICATION: PublicationObject = [
 export const SOCIALS: SocialObjects = [
   {
     name: "Mail",
-    href: "mailto:dsparikesit@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
+    href: "mailto:vqx2dc@virginia.edu",
+    linkTitle: `Send an email to ${SITE.author}`,
     active: true,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/dimas-parikesit/",
-    linkTitle: `Have job opportunities? ${SITE.title} on LinkedIn`,
+    linkTitle: `Connect with ${SITE.author} on LinkedIn`,
     active: true,
   },
   {
     name: "Github",
     href: "https://github.com/dParikesit",
-    linkTitle: `Checkout ${SITE.title} on Github`,
+    linkTitle: `View ${SITE.author}'s projects on GitHub`,
     active: true,
   },
   {
