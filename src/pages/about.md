@@ -7,9 +7,9 @@ title: "About"
   <img src="/assets/profpic.webp" class="sm:w-1/2 mx-auto" alt="Dimas Shidqi Parikesit">
 </div>
 
-Hi, I'm Dimas Shidqi Parikesit, a Computer Science PhD student at LiftLab, University of Virginia, advised by [Prof. Chang Lou](https://changlousys.github.io/).
+Hi, I'm Dimas Parikesit, a Computer Science PhD candidate at LiftLab, University of Virginia, advised by [Prof. Chang Lou](https://changlousys.github.io/).
 
-My research focuses on **systems reliability, cloud and distributed systems, and AI inference systems**. I work on using LLMs and program analysis to preserve system semantics and prevent failures. You can find my [selected publications on the homepage](/#publication).
+My research focuses on **verifying correctness of distributed systems using LLM and formal methods**. I believe formal methods is the key to more reliable programs, and LLM will make it accessible to wide range of programs. You can find my [selected publications on the homepage](/#publication).
 
 ## Education
 
