@@ -70,6 +70,40 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <Hr />
 
+    <section id="publication">
+      <h2>Selected Publications</h2>
+      <ul class="my-6">
+        {
+          PUBLICATION.map(data => (
+            <li class="mb-6 last:mb-0">
+              <LinkButton
+                className="text-skin-accent decoration-dashed hover:underline hover:underline-offset-4"
+                href={data.url}
+              >
+                {data.title}
+              </LinkButton>
+              <p class="mt-1 text-sm italic">
+                {data.authors.map((author, index) => (
+                  <span
+                    class={
+                      DIMASNAMES.some(dims => dims.name === author)
+                        ? "font-bold"
+                        : "opacity-80"
+                    }
+                  >
+                    {author + (index < data.authors.length - 1 ? ", " : "")}
+                  </span>
+                ))}
+              </p>
+              <div class="mt-1 text-sm">{data.conference}</div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <Hr />
+
     <section id="research">
       <h2>Research</h2>
       <div class="my-6 space-y-6">
@@ -105,40 +139,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           More about my background and experience
         </LinkButton>
       </div>
-    </section>
-
-    <Hr />
-
-    <section id="publication">
-      <h2>Selected Publications</h2>
-      <ul class="my-6">
-        {
-          PUBLICATION.map(data => (
-            <li class="mb-6 last:mb-0">
-              <LinkButton
-                className="text-skin-accent decoration-dashed hover:underline hover:underline-offset-4"
-                href={data.url}
-              >
-                {data.title}
-              </LinkButton>
-              <p class="mt-1 text-sm italic">
-                {data.authors.map((author, index) => (
-                  <span
-                    class={
-                      DIMASNAMES.some(dims => dims.name === author)
-                        ? "font-bold"
-                        : "opacity-80"
-                    }
-                  >
-                    {author + (index < data.authors.length - 1 ? ", " : "")}
-                  </span>
-                ))}
-              </p>
-              <div class="mt-1 text-sm">{data.conference}</div>
-            </li>
-          ))
-        }
-      </ul>
     </section>
 
     <Hr />

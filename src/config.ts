@@ -32,6 +32,14 @@ export const LOGO_IMAGE = {
 
 export const SERVICES: ServicesObject = [
   {
+    title: "OSDI'26 Artifact Evaluation - Evaluated 3 research prototypes",
+    services: [],
+  },
+  {
+    title: "Teaching Assistant - University of Virginia",
+    services: ["Cloud Computing"],
+  },
+  {
     title: "Teaching Assistant - Bandung Institute of Technology",
     services: [
       "Artificial Intelligence",
